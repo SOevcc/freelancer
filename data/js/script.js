@@ -1,7 +1,7 @@
 const cvLinks = {
-    fr: "https://tonlien.fr/toncv_francais.pdf", // Remplace par ton lien
-    de: "https://github.com/SOevcc/freelancer/raw/main/data/PascalMarty_Lebenslauf2025.pdf",
-    en: "https://tonlien.fr/toncv_english.pdf"  // Remplace par ton lien
+    fr: "https://github.com/SOevcc/freelancer/raw/main/data/Pascal_Marty_CV_FR.pdf", // Remplace par ton lien
+    de: "https://github.com/SOevcc/freelancer/raw/main/data/Pascal_Marty_CV_DE.pdf",
+    en: "https://github.com/SOevcc/freelancer/raw/main/data/Pascal_Marty_CV_EN.pdf"  // Remplace par ton lien
 };
 let translations = {};
 
@@ -12,14 +12,14 @@ async function loadLanguage(lang) {
             throw new Error(`Erreur HTTP! Statut: ${response.status}`);
         }
         translations = await response.json();
-        updatePageContent();
+        updatePageContent(lang);
     } catch (error) {
         console.error("Erreur lors du chargement du fichier de traduction :", error);
         document.body.innerHTML = `<h1 style="color: red;">Erreur : ${error.message}</h1>`;
     }
 }
 
-function updatePageContent() {
+function updatePageContent(lang) {
     // Mise à jour de tous les éléments
     document.getElementById('title').innerHTML = translations.title || "Titre non trouvé";
     document.getElementById('subtitle').innerHTML = `<strong>${translations.subtitle || "Sous-titre non trouvé"}</strong>`;
@@ -43,7 +43,7 @@ function updatePageContent() {
     document.getElementById('why-me-item-2').innerHTML = translations['why-me-item-2'] || "Élément 2 non trouvé";
     document.getElementById('why-me-item-3').innerHTML = translations['why-me-item-3'] || "Élément 3 non trouvé";
     document.getElementById('why-me-item-4').innerHTML = translations['why-me-item-4'] || "Élément 4 non trouvé";
-    document.getElementById("cv-button").textContent = translations[lang]["cv-button"];
+    document.getElementById("cv-button").textContent = translations["cv-button"];
 	document.getElementById("cv-button").href = cvLinks[lang];
 	//document.getElementById('cv-button').textContent = translations['cv-button'] || "Bouton CV non trouvé";
 }
