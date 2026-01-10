@@ -32,6 +32,11 @@ function updatePageContent(lang) {
     document.getElementById('profile-title').textContent = translations['profile-title'] || "Profil non trouvé";
     document.getElementById('profile-text-1').innerHTML = translations['profile-text-1'] || "Texte de profil 1 non trouvé";
     document.getElementById('profile-text-2').innerHTML = translations['profile-text-2'] || "Texte de profil 2 non trouvé";
+	document.getElementById('profile-text-3').innerHTML = translations['profile-text-3'] || "Texte de profil 3 non trouvé";
+	document.getElementById('subprofile-text1').innerHTML = translations['subprofile-text1'] || "subTexte de profil 1 non trouvé";
+	document.getElementById('subprofile-text2').innerHTML = translations['subprofile-text2'] || "subTexte de profil 2 non trouvé";
+	document.getElementById('subprofile-text3').innerHTML = translations['subprofile-text3'] || "subTexte de profil 3 non trouvé";
+	document.getElementById('subprofile-summary').innerHTML = translations['subprofile-summary'] || "subTexte de profil summary non trouvé";
     document.getElementById('skills-title').textContent = translations['skills-title'] || "Compétences non trouvées";
     document.getElementById('skill-1').innerHTML = translations['skill-1'] || "Compétence 1 non trouvée";
     document.getElementById('skill-2').innerHTML = translations['skill-2'] || "Compétence 2 non trouvée";
