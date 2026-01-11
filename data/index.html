@@ -10,9 +10,27 @@
 	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
+  	 
   <div class="container">
-        <h1 id="title"></h1>
-        <p id="subtitle" style="text-align: center; font-size: 12pt; margin-bottom: 20px;"></p>
+        <div class="title-container">
+			<h1 id="title"></h1>
+			<div class="language-buttons">
+				<button class="language-button" onclick="changeLanguage('fr')">
+					<span>🇫🇷</span>
+					<span>FR</span>
+				</button>
+				<button class="language-button" onclick="changeLanguage('de')">
+					<span>🇩🇪</span>
+					<span>DE</span>
+				</button>
+				<button class="language-button" onclick="changeLanguage('en')">
+					<span>🇬🇧</span>
+					<span>EN</span>
+				</button>
+			</div>
+		</div>
+        
+		<p id="subtitle" style="text-align: center; font-size: 12pt; margin-bottom: 20px;"></p>
    
    <div class="profile-container">
         <img src="https://media.licdn.com/dms/image/v2/D4E03AQFGXXPqCd3sVg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1691183415818?e=1769040000&v=beta&t=-AvOkbniDhGQ0Fl0U4EYDYXFLY37MnXXflDaXxEv9HY"
@@ -90,7 +108,7 @@
         </p>
     </div>
 	<!-- Intégration des boutons de langue à l'intérieur du conteneur -->
-    <div class="language-buttons">
+    <!--div class="language-buttons">
         <button class="language-button" onclick="changeLanguage('fr')">
             <span>🇫🇷</span>
             <span>Français</span>
@@ -103,7 +121,7 @@
             <span>🇬🇧</span>
             <span>English</span>
         </button>
-    </div>
+    </div-->
 
     <script src="js/script.js"></script>
 </body>

@@ -18,7 +18,11 @@ body {
     border-radius: 5px;
     box-sizing: border-box;
 }
-
+.title-container {
+    display: flex;          /* Active Flexbox */
+    align-items: center;   /* Centre verticalement les éléments */
+    gap: 10px;             /* Espace entre le titre et les boutons */
+}
 .profile-container {
     display: flex;
     align-items: flex-start;
@@ -60,22 +64,25 @@ body {
 /* Style pour les boutons de langue */
 .language-buttons {
             display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin: 20px 0;
+            /*justify-content: center;*/
+            gap: 0px;
+            /*margin: 20px 0;*/
         }
 
 .language-button {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 0px;
             background-color: #f0f0f0
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 8px 12px;
+            /*border: 1px solid #ddd;*/
+			/*border: none;*/
+            border-radius: 1px;
+            padding: 1px 2px;
             cursor: pointer;
-            font-size: 14px;
+            /*font-size: 12px;*/
+			font-size:0.5rem;
             color: #333;
+			min-width: 0;
             transition: background-color 0.3s;
         }
 
