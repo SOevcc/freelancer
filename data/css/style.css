@@ -8,6 +8,7 @@ body {
     background-color: #f9f9f9;
 }
 
+
 .container {
     width: 100%;
     max-width: 700px;
@@ -18,11 +19,15 @@ body {
     border-radius: 5px;
     box-sizing: border-box;
 }
-.title-container {
-    display: flex;          /* Active Flexbox */
-    align-items: center;   /* Centre verticalement les éléments */
-    gap: 10px;             /* Espace entre le titre et les boutons */
-}
+
+/*.title-container {
+    display: flex;          
+    align-items: center;   
+    gap: 10px;             
+	flex-wrap: nowrap;
+	width: 100%
+}*/
+
 .profile-container {
     display: flex;
     align-items: flex-start;
@@ -64,23 +69,25 @@ body {
 /* Style pour les boutons de langue */
 .language-buttons {
             display: flex;
-            /*justify-content: center;*/
-            gap: 0px;
+            justify-content: center;
+			align-items: center;
+			/*flex-shrink: 0;*/
+            gap: 5px;
             /*margin: 20px 0;*/
         }
 
 .language-button {
             display: flex;
             align-items: center;
-            gap: 0px;
+            gap: 5px;
             background-color: #f0f0f0
             /*border: 1px solid #ddd;*/
 			/*border: none;*/
             border-radius: 1px;
             padding: 1px 2px;
             cursor: pointer;
-            /*font-size: 12px;*/
-			font-size:0.5rem;
+            font-size: 12px;
+			/*font-size:0.5rem;*/
             color: #333;
 			min-width: 0;
             transition: background-color 0.3s;
